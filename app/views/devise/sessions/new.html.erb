@@ -1,7 +1,7 @@
 <%= turbo_frame_tag "main-content" do %>
   <h2>Log in</h2>
 
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-horizontal', data: { turbo: "true" } }) do |f| %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-horizontal', data: { turbo: "true", turbo_frame: "main-content" } }) do |f| %>
     <div class="form-group">
       <%= f.label :email, class: 'col-sm-2 control-label' %>
       <div class="col-sm-10">
